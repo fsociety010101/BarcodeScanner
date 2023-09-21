@@ -59,13 +59,10 @@
 		87BA486A2ABB4BEC005520FA /* BarcodeScanner */ = {
 			isa = PBXGroup;
 			children = (
+				87BA48852ABC6395005520FA /* Utilities */,
+				87BA48832ABC6367005520FA /* Views */,
 				87BA48812ABC62CD005520FA /* Screens */,
 				87BA486B2ABB4BEC005520FA /* BarcodeScannerApp.swift */,
-				87BA486D2ABB4BEC005520FA /* BarcodeScannerView.swift */,
-				87BA487F2ABC6128005520FA /* BarcodeScannerViewModel.swift */,
-				87BA48792ABB515E005520FA /* ScannerViewController.swift */,
-				87BA487B2ABB58C3005520FA /* ScannerView.swift */,
-				87BA487D2ABC600D005520FA /* Alert.swift */,
 				87BA486F2ABB4BEF005520FA /* Assets.xcassets */,
 				87BA48712ABB4BEF005520FA /* Preview Content */,
 			);
@@ -91,8 +88,35 @@
 		87BA48822ABC62DB005520FA /* BarcodeScanner */ = {
 			isa = PBXGroup;
 			children = (
+				87BA487F2ABC6128005520FA /* BarcodeScannerViewModel.swift */,
+				87BA486D2ABB4BEC005520FA /* BarcodeScannerView.swift */,
 			);
 			path = BarcodeScanner;
+			sourceTree = "<group>";
+		};
+		87BA48832ABC6367005520FA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				87BA48842ABC636C005520FA /* UIKit Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		87BA48842ABC636C005520FA /* UIKit Components */ = {
+			isa = PBXGroup;
+			children = (
+				87BA48792ABB515E005520FA /* ScannerViewController.swift */,
+				87BA487B2ABB58C3005520FA /* ScannerView.swift */,
+			);
+			path = "UIKit Components";
+			sourceTree = "<group>";
+		};
+		87BA48852ABC6395005520FA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				87BA487D2ABC600D005520FA /* Alert.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
