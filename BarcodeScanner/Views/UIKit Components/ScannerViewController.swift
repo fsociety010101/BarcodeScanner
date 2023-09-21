@@ -13,7 +13,7 @@ enum CameraError {
     case invalidScannedValue
 }
 
-protocol ScannerViewControllerDelegate: class {
+protocol ScannerViewControllerDelegate: AnyObject {
     func didFind(barcode: String)
     func didSurface(error: CameraError)
 }
@@ -97,17 +97,17 @@ extension ScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         guard let object = metadataObjects.first else {
-            scannerDelegate?.didSurface(error: .invalidScannedValue)
+//            scannerDelegate?.didSurface(error: .invalidScannedValue)
             return
         }
         
         guard let machineReadableObject = object as? AVMetadataMachineReadableCodeObject else {
-            scannerDelegate?.didSurface(error: .invalidScannedValue)
+//            scannerDelegate?.didSurface(error: .invalidScannedValue)
             return
         }
         
         guard let barcode = machineReadableObject.stringValue else {
-            scannerDelegate?.didSurface(error: .invalidScannedValue)
+//            scannerDelegate?.didSurface(error: .invalidScannedValue)
             return
         }
         
